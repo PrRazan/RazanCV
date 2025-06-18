@@ -198,3 +198,32 @@ body{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px 10px;
+    height: auto;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .menu li {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .button-56 {
+    padding: 6px 20px;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+}
