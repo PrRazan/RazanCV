@@ -45,6 +45,7 @@ body{
   display: flex;
   gap: 60px;
   list-style: none;
+  margin-left: 50px;
 }
 
 .menu li a {
@@ -176,12 +177,6 @@ body{
   background: rgba(0, 0, 0, 0.7);
   height: fit-content;
   padding: 10px 20px 10px 20px;
-}
-
-.statement-section h1 {
-  color: var(--color-primary, #6a5acd);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
 }
 
 .statement-section p {
