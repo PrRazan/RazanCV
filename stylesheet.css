@@ -23,14 +23,22 @@ body{
    font-family: "Source Code Pro", monospace;
 }
 
+.home .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
 .navbar {
-  position: relative;
+   position: relative;
   z-index: 2;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100px;
   background: rgba(0, 0, 0, 0.6);
+  padding: 10px 10px 5px 10px;
 }
 
 .menu {
@@ -167,6 +175,7 @@ body{
   z-index: 1;
   background: rgba(0, 0, 0, 0.7);
   height: fit-content;
+  padding: 10px 20px 10px 20px;
 }
 
 .statement-section h1 {
