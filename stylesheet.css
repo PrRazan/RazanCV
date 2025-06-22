@@ -674,3 +674,503 @@ color: rgb(0, 0, 0);
   flex: 0 1 calc(33.333% - 30px); 
   box-sizing: border-box;
 }
+
+
+.Skillcard { 
+  width: 300px;
+  height: 250px;
+  background: linear-gradient(45deg, #ff69b4,RGB(191, 123, 132),RGB(149, 171, 197));
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: -20px 20px 0px -5px #ffffff;
+}
+
+.card__tags {
+  overflow: auto;
+  height: 80%;
+}
+
+.Stitle { 
+  font-weight: 900;
+  font-size: 1.7em;
+}
+
+.tag__name {
+  display: inline-block;
+  color: #000000;
+  font-size: 1.1em;
+  background-color: #ffffff;
+  padding: 6px 23px 9px;
+  border-radius: 70em;
+  margin: 8px 6px 8px 0;
+  margin-left: 0px;
+  position: relative;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.tag__name::before,
+.tag__name::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 40%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #878787;
+}
+
+.tag__name::before {
+  left: 7px;
+}
+.tag__name::after {
+  right: 7px;
+}
+.tag__name:hover {
+  transform: scale(1.1);
+  background-color: #8b8b8b79;
+}
+
+
+.m2-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.m2 {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  width: 20vmin;
+  height: 20vmin;
+  background: linear-gradient(135deg, #1e1e24 10%, #050505 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: gradient-shift 5s ease-in-out infinite;
+  background-size: 200% 200%;
+  z-index: 1;
+  margin-left: 6px;
+  border-radius: 10px;
+}
+
+.m2-wrapper::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 1vmin;
+  background: radial-gradient(circle at 0 0, hsl(0, 0%, 100%) 20%, transparent 70%),
+              radial-gradient(circle at 100% 0,RGB(149, 171, 197) 20%, transparent 70%),
+              radial-gradient(circle at 0 100%, #ff69b4 20%, transparent 70%),
+              radial-gradient(circle at 100% 100%, RGB(191, 123, 132) 20%, transparent 70%);
+  filter: blur(1.5vmin);
+  animation: blur-animation 3s ease-in-out alternate infinite;
+  z-index: 0;
+  pointer-events: none;
+  margin-bottom: 100px;
+}
+
+.logo img {
+ margin-right: 50px;
+  width: 100px;
+  height: 80px;
+}
+
+@keyframes blur-animation {
+  to {
+    filter: blur(2.5vmin);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vmin, 1fr));
+  gap: 2vmin;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vmin;
+  background: #000;
+}
+
+
+.main_back {
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  top:50%;
+  left: 50%;
+  width: 11rem;
+  height: 11rem;
+  background: linear-gradient(270deg, #03a9f4, #cc39a4, #ffb5d2);
+  z-index: -1;
+  opacity: 0.3;
+  box-shadow: inset 0px 0px 60px 2px #ffffff;
+  pointer-events: none;
+}
+
+.skmain {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width:20em;
+  gap:2.5em;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.skcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 10px;
+  background: lightgrey;
+  transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
+    0.2s background-image ease-in-out;
+  background: rgba(255, 143, 212, 0.596);
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(5px);
+  will-change: transform;
+}
+
+.skcard:hover {
+  transform: scale(1.1); 
+  transition: transform 0.2s ease-in-out;
+}
+
+.skcard img {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.skmain:hover .skcard img {
+  opacity: 1;
+}
+
+.skcard:nth-child(2) {
+  border-radius: 0px;
+}
+
+.skcard:nth-child(2) .sql {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #03a9f4;
+}
+
+.skcard:nth-child(3) {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.skcard:nth-child(3) .dribble {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #ffb5d2;
+}
+
+.skcard:nth-child(4) {
+  border-radius: 0px;
+}
+
+.skcard:nth-child(4) .codepen {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.skcard:nth-child(5) {
+  border-radius: 0px;
+}
+
+.skcard:nth-child(5) .uiverse {
+  position: absolute;
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.skcard:nth-child(6) {
+  border-radius: 0px;
+}
+
+.skcard:nth-child(6) .discord {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #8c9eff;
+}
+
+.skcard:nth-child(7) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.skcard:nth-child(7) .github {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.skcard:nth-child(8) {
+  border-radius: 0px;
+}
+
+.skcard:nth-child(8) .telegram {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #29b6f6;
+}
+
+.skcard:nth-child(9) {
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.skcard:nth-child(9) .reddit {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.skmain:hover {
+  width: 14em;
+  cursor: pointer;
+}
+
+.skmain:hover .main_back {
+  opacity: 0;
+}
+
+.skmain:hover .skcard {
+  margin: 0.2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skmain:hover .skcard:nth-child(5) {
+  border: transparent;
+}
+
+.skmain:hover .text {
+  opacity: 0;
+  z-index: -3;
+}
+
+.skmain:hover .instagram {
+  opacity: 1;
+}
+
+.skmain:hover .twitter {
+  opacity: 1;
+}
+
+.skmain:hover .dribble {
+  opacity: 1;
+}
+
+.skmain:hover .codepen {
+  opacity: 1;
+}
+
+.skmain:hover .uiverse {
+  opacity: 1;
+}
+
+.skmain:hover .discord {
+  opacity: 1;
+}
+
+.skmain:hover .github {
+  opacity: 1;
+}
+
+.skmain:hover .telegram {
+  opacity: 1;
+}
+
+.skmain:hover .reddit {
+  opacity: 1;
+}
+
+.skcard:nth-child(1):hover {
+  background-color: #03a9f4;
+}
+
+
+.skcard:nth-child(2):hover {
+  background-color: #ffffff;
+}
+
+.skcard:nth-child(3):hover {
+  background-color: #ffb5d2;
+}
+
+.skcard:nth-child(4):hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.skcard:nth-child(5):hover {
+background: #8a8a8a;}
+
+
+.skcard:nth-child(6):hover {
+  background-color: #ffffff;
+}
+
+.skcard:nth-child(7):hover {
+  background-color: black;
+}
+
+.skcard:nth-child(8):hover {
+  background-color: #ffffff;
+}
+
+.skcard:nth-child(9):hover {
+  background-color: rgb(133, 162, 219);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.33em;
+  z-index: 10;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cards-row {
+  display: flex;
+  gap: 2px; 
+  align-items: center;
+  margin-top: 70px; 
+  margin-left: 200px;
+}
+
+/* From Uiverse.io by DavidTM96 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding-inline: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  background-color: #0a192f;
+  border-radius: 20px;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 2em;
+  color: #f3a2d1;
+  font-size: 1.2em;
+  background-color: transparent;
+  align-self: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 1em;
+  margin-left: 119px;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  outline: 1px solid #ffc7f3;
+  transition: all ease-in-out 0.3s;
+  width: 200px;
+}
+
+.sendMessage-btn:hover {
+  transition: all ease-in-out 0.3s;
+  background: linear-gradient(45deg, #ff69b4,RGB(191, 123, 132),RGB(149, 171, 197));
+  color: #000;
+  cursor: pointer;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.form-card1 {
+  background: linear-gradient(45deg, #ff69b4,RGB(191, 123, 132),RGB(149, 171, 197));
+  border-radius: 22px;
+  transition: all 0.3s;
+  height: 390px;
+  width: 500px;
+  margin-left: 380px;
+  margin-top: 50px;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px rgba(100, 208, 255, 0.3);
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
