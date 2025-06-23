@@ -1571,13 +1571,18 @@ background: #8a8a8a;}
   }
 
    .form-card1 {
-    width: 90%;
+    width: auto;
+    max-width: 90%;
     margin: 20px auto;
     height: auto;
-    padding: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .form {
+    width: 100%;
     padding: 10px;
   }
 
@@ -1587,6 +1592,7 @@ background: #8a8a8a;}
     display: block;
   }
 }
+
 
 @media (max-width: 768px) {
 
