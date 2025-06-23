@@ -1570,9 +1570,21 @@ background: #8a8a8a;}
     justify-content: center;
   }
 
-  .form-card1 {
+   .form-card1 {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    padding: 20px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .sendMessage-btn {
     width: 100%;
-    margin: 30px 0;
+    margin: 10px 0 0 0;
+    display: block;
   }
 }
 
