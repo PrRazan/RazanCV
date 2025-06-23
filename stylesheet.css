@@ -557,6 +557,64 @@ body{
   transition-duration: .3s;
 }
 
+/* From Uiverse.io by vinodjangid07 */ 
+.embutton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(110, 0, 0);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.emsvgIcon {
+  width: 30px;
+  transition-duration: 0.3s;
+  align-items: center;
+  margin-left: 1px;
+}
+
+.emsvgIcon path {
+  fill: white;
+}
+
+.embutton:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(110, 0, 0);
+  align-items: center;
+}
+
+.embutton:hover .emsvgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.embutton::before {
+  position: absolute;
+  bottom: -20px;
+  content: "My Email";
+  color: white;
+  font-size: 0px;
+}
+
+.embutton:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
+}
+
+
 .org{
   display: flex;
 }
