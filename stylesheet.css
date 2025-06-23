@@ -1524,6 +1524,10 @@ background: #8a8a8a;}
 }
 
 @media (max-width: 768px) {
+
+  .button-text span {
+    color: rgb(0, 0, 0) !important;
+  }
   .navbar {
     flex-direction: column;
     gap: 10px;
@@ -1655,5 +1659,13 @@ background: #8a8a8a;}
   .unib-button {
     width: 140px;
     padding: 5px;
+  }
+  .skmain {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .Skillcard {
+    margin: 20px auto;
   }
 }
