@@ -1805,26 +1805,25 @@ background: #8a8a8a;}
     justify-content: center;
   }
 
-    .form-card1 {
-    width: 90%; 
-    height: auto; 
+   .form-card1 {
+    width: 80%; 
     margin: 20px auto; 
-    padding: 10px;
+    padding: 1px;
+    margin-top: 50px;
+  }
+
+  .form-card2{
+    width: 100%;
   }
 
   .form {
     padding-inline: 1em;
+    height: 390px;
   }
 
   .form-heading {
     font-size: 1em;
     margin: 1em auto;
-  }
-
-  .sendMessage-btn {
-    margin: 1em auto;
-    width: 100%;
-    padding: 0.8em;
   }
 
   .form-field {
@@ -1880,7 +1879,7 @@ background: #8a8a8a;}
 
   .sendMessage-btn{
     width: 150px;
-    margin-left: 59px;
+    margin-left: 74px;
   }
 
    .button-text {
