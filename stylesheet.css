@@ -40,7 +40,7 @@ body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(0, 0, 0, 0.368);
+  background: rgba(0, 0, 0, 0.731);
   padding: 10px 10px 5px 10px;
   font-size: 40px;
 }
@@ -718,7 +718,7 @@ body{
   display: block;
   clear: both;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .front-text {
