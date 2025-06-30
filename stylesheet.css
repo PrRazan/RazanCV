@@ -1891,17 +1891,22 @@ background: #8a8a8a;}
   }
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+  }
+
+  .lbg{
+    display: flex;
+    align-items: center;
   }
 
   div{
-    scroll-margin-top: 130px;
+    scroll-margin-top: 195px;
   }
 
   .menu {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-left: 0;
   }
 
