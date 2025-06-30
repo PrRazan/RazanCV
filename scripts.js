@@ -20,18 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       if (this.checked && isArabic) {
         const newFileName = fileName.replace("-ar", "");
-        newPath = url.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
+        newPath = window.location.origin + path.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
       } else if (!this.checked && !isArabic) {
         const dotIndex = fileName.lastIndexOf(".");
         const nameWithoutExt = fileName.substring(0, dotIndex);
         const ext = fileName.substring(dotIndex);
         const newFileName = nameWithoutExt + "-ar" + ext;
-        newPath = url.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
+        newPath = window.location.origin + path.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
       }
     }
 
     if (newPath !== "") {
-      window.location.href = newPath;
+      window.location.href = newPath + hash;
     }
   });
 });
