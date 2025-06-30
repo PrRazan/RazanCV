@@ -159,10 +159,10 @@ body{
 }
 
 .switch {
-  --_switch-bg-clr: #f48fb1;
+  --_switch-bg-clr: #ffffff;
   --_switch-padding: 2px;
-  --_slider-bg-clr: rgba(221, 107, 160, 0.65);
-  --_slider-bg-clr-on: rgba(221, 107, 160, 1);
+  --_slider-bg-clr: rgba(232, 186, 208, 0.65);
+  --_slider-bg-clr-on: rgb(232, 186, 208, 1);
   --_slider-txt-clr: #ffffff;
   --_label-padding: 0.3rem 0.8rem;
   --_switch-easing: cubic-bezier(0.47, 1.64, 0.41, 0.8);
