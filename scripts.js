@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (fileName === "index.html" || fileName === "index-ar.html") {
       newPath = this.checked
-        ? url.replace("index-ar.html", "index.html")
-        : url.replace("index.html", "index-ar.html");
+        ? window.location.origin + path.replace("index-ar.html", "index.html")
+        : window.location.origin + path.replace("index.html", "index-ar.html");
     } else {
       if (this.checked && isArabic) {
         const newFileName = fileName.replace("-ar", "");
@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-
 
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
