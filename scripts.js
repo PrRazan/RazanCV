@@ -6,25 +6,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const hash = window.location.hash;
   const fileName = path.substring(path.lastIndexOf("/") + 1);
 
-  const isArabic = url.includes("arbFiles");
+  
+  const isArabic = fileName.includes("-ar") || url.includes("arbFiles");
 
   toggle.checked = !isArabic;
 
   toggle.addEventListener("change", function () {
     let newPath = "";
 
+
     if (this.checked) {
       if (isArabic) {
-        const newFileName = fileName.replace("-ar", "");
-        newPath = url.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
+        if (fileName === "index-ar.html") {
+       
+          newPath = url.replace("arbFiles/index-ar.html", "index.html");
+        } else {
+          const newFileName = fileName.replace("-ar", "");
+          newPath = url.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
+        }
       }
     } else {
       if (!isArabic) {
-        const dotIndex = fileName.lastIndexOf(".");
-        const nameWithoutExt = fileName.substring(0, dotIndex);
-        const ext = fileName.substring(dotIndex);
-        const newFileName = nameWithoutExt + "-ar" + ext;
-        newPath = url.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
+        if (fileName === "index.html") {
+
+          newPath = url.replace("index.html", "arbFiles/index-ar.html");
+        } else {
+          const dotIndex = fileName.lastIndexOf(".");
+          const nameWithoutExt = fileName.substring(0, dotIndex);
+          const ext = fileName.substring(dotIndex);
+          const newFileName = nameWithoutExt + "-ar" + ext;
+          newPath = url.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
+        }
       }
     }
 
