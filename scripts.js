@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const hash = window.location.hash;
   const fileName = path.substring(path.lastIndexOf("/") + 1);
 
-  
   const isArabic = fileName.includes("-ar") || url.includes("arbFiles");
 
   toggle.checked = !isArabic;
@@ -14,29 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("change", function () {
     let newPath = "";
 
-
-    if (this.checked) {
-      if (isArabic) {
-        if (fileName === "index-ar.html") {
-       
-          newPath = url.replace("arbFiles/index-ar.html", "index.html");
-        } else {
-          const newFileName = fileName.replace("-ar", "");
-          newPath = url.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
-        }
-      }
+    if (fileName === "index.html" || fileName === "index-ar.html") {
+      newPath = this.checked
+        ? url.replace("index-ar.html", "index.html")
+        : url.replace("index.html", "index-ar.html");
     } else {
-      if (!isArabic) {
-        if (fileName === "index.html") {
-
-          newPath = url.replace("index.html", "arbFiles/index-ar.html");
-        } else {
-          const dotIndex = fileName.lastIndexOf(".");
-          const nameWithoutExt = fileName.substring(0, dotIndex);
-          const ext = fileName.substring(dotIndex);
-          const newFileName = nameWithoutExt + "-ar" + ext;
-          newPath = url.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
-        }
+      if (this.checked && isArabic) {
+        const newFileName = fileName.replace("-ar", "");
+        newPath = url.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
+      } else if (!this.checked && !isArabic) {
+        const dotIndex = fileName.lastIndexOf(".");
+        const nameWithoutExt = fileName.substring(0, dotIndex);
+        const ext = fileName.substring(dotIndex);
+        const newFileName = nameWithoutExt + "-ar" + ext;
+        newPath = url.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
       }
     }
 
@@ -45,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 
 
