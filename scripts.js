@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
   const hash = window.location.hash;
   const fileName = path.substring(path.lastIndexOf("/") + 1);
-  const basePath = "/RazanCV/";
 
   const isArabic = fileName.includes("-ar") || url.includes("arbFiles");
 
@@ -15,19 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let newPath = "";
 
     if (fileName === "" || fileName === "index.html" || fileName === "index-ar.html") {
-      newPath = this.checked
-        ? window.location.origin + basePath + "index.html"
-        : window.location.origin + basePath + "index-ar.html";
+      newPath = this.checked ? "index.html" : "index-ar.html";
     } else {
       if (this.checked && isArabic) {
         const newFileName = fileName.replace("-ar", "");
-        newPath = window.location.origin + path.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
+        newPath = path.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
       } else if (!this.checked && !isArabic) {
         const dotIndex = fileName.lastIndexOf(".");
         const nameWithoutExt = fileName.substring(0, dotIndex);
         const ext = fileName.substring(dotIndex);
         const newFileName = nameWithoutExt + "-ar" + ext;
-        newPath = window.location.origin + path.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
+        newPath = path.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
       }
     }
 
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
@@ -74,12 +70,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.getElementById("playBtn1").addEventListener("click", function () {
-    const video = document.getElementById("BlackBoard");
-    if (video) video.play();
-  });
 
-  document.getElementById("playBtn2").addEventListener("click", function () {
-    const video = document.getElementById("Emergency");
-    if (video) video.play();
-  });

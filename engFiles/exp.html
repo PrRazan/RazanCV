@@ -45,7 +45,7 @@
         <div class="content-box">
           <div class="card-video-container1">
             <video id="BlackBoard" class="card-video" muted>
-              <source src="../BB.mp4" type="video/mp4" />
+              <source src="../bb.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -82,7 +82,7 @@
         <div class="content-box">
           <div class="card-video-container1">
             <video id="Emergency" class="card-video" muted>
-              <source src="../EM.MP4" type="video/mp4" />
+              <source src="../em.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -101,7 +101,23 @@
       </div>
     </div>
   </div>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+  const playBtn1 = document.getElementById("playBtn1");
+  const video1 = document.getElementById("BlackBoard");
+  if (playBtn1 && video1) {
+    playBtn1.addEventListener("click", function () {
+      video1.play();
+    });
+  }
 
+  const playBtn2 = document.getElementById("playBtn2");
+  const video2 = document.getElementById("Emergency");
+  if (playBtn2 && video2) {
+    playBtn2.addEventListener("click", function () {
+      video2.play();
+    });
+  }
+});</script>
   <footer class="site-footer">
   <div class="footer-container">
     <div class="org">
@@ -164,6 +180,6 @@
 Some components were adapted and customized from Uiverse.io.</h6>
   </div>
 </footer>
-  <script src="../scripts.js" defer></script>
+  <script src="../scripts.js"></script>
 </body>
 </html>

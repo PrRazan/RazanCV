@@ -108,7 +108,23 @@
       </div>
     </div>
   </div>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+  const playBtn1 = document.getElementById("playBtn1");
+  const video1 = document.getElementById("BlackBoard");
+  if (playBtn1 && video1) {
+    playBtn1.addEventListener("click", function () {
+      video1.play();
+    });
+  }
 
+  const playBtn2 = document.getElementById("playBtn2");
+  const video2 = document.getElementById("Emergency");
+  if (playBtn2 && video2) {
+    playBtn2.addEventListener("click", function () {
+      video2.play();
+    });
+  }
+});</script>
   <!-- الفوتر -->
   <footer class="site-footer">
     <div class="footer-container">
