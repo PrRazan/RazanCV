@@ -36,7 +36,7 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -293,6 +293,13 @@ input:checked:focus + .switch-left + .switch-right {
   color: #333;
 }
 
+.lbg{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 70px;
+}
 /*End of navbar*/
 
 /*about me page*/
@@ -844,7 +851,6 @@ input:checked:focus + .switch-left + .switch-right {
   --color-gar: linear-gradient(90deg,#03a9f4,#f441a5,#ea9acb,#005d87);
   letter-spacing: 3px;
   font-size: 2em;
-  font-family: "Arial";
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px var(--stroke-color);
@@ -1737,7 +1743,6 @@ background: #8a8a8a;}
   font-size: 1.5em;
   color: black;
   font-weight: bold;
-  letter-spacing: 0.33em;
   z-index: 10;
   text-align: center;
   pointer-events: none;
@@ -1895,8 +1900,10 @@ background: #8a8a8a;}
   }
 
   .lbg{
-    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
+    gap: 25px;
   }
 
   div{

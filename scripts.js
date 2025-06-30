@@ -1,21 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("langToggle");
 
+  const path = window.location.pathname;
+  const hash = window.location.hash; 
+  const isArabic = path.includes("-ar");
 
-  if (window.location.href.includes("index-ar.html")) {
-    toggle.checked = false;
-  } else {
-    toggle.checked = true;
-  }
+  toggle.checked = !isArabic;
 
   toggle.addEventListener("change", function () {
+    let newPath = "";
+
     if (this.checked) {
-      window.location.href = "index.html"; // للإنجليزي
+  
+      if (path.includes("index-ar.html")) {
+        newPath = "index.html";
+      } else if (path.includes("AMI-ar.html")) {
+        newPath = "AllMyInfo.html";
+      }
     } else {
-      window.location.href = "index-ar.html"; // للعربي
+
+      if (path.includes("index.html")) {
+        newPath = "index-ar.html";
+      } else if (path.includes("AllMyInfo.html")) {
+        newPath = "AMI-ar.html";
+      }
+    }
+
+    if (newPath !== "") {
+      window.location.href = newPath + hash;
     }
   });
 });
+
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
