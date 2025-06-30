@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
   const hash = window.location.hash;
   const fileName = path.substring(path.lastIndexOf("/") + 1);
+  const basePath = "/RazanCV/";
 
   const isArabic = fileName.includes("-ar") || url.includes("arbFiles");
 
@@ -13,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
   toggle.addEventListener("change", function () {
     let newPath = "";
 
-    if (fileName === "index.html" || fileName === "index-ar.html") {
+    if (fileName === "" || fileName === "index.html" || fileName === "index-ar.html") {
       newPath = this.checked
-        ? window.location.origin + path.replace("index-ar.html", "index.html")
-        : window.location.origin + path.replace("index.html", "index-ar.html");
+        ? window.location.origin + basePath + "index.html"
+        : window.location.origin + basePath + "index-ar.html";
     } else {
       if (this.checked && isArabic) {
         const newFileName = fileName.replace("-ar", "");
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
 
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
