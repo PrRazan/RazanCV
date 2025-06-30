@@ -191,7 +191,7 @@ body{
 }
 
 .switch > span {
-   font-size: 15px;
+   font-size: 13px;
   display: grid;
   place-content: center;
   transition: opacity 300ms ease-in-out 150ms;
