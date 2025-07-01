@@ -1,41 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("langToggle");
-
-  const url = window.location.href;
-  const path = window.location.pathname;
-  const hash = window.location.hash;
-  const fileName = path.substring(path.lastIndexOf("/") + 1);
-
-  const isArabic = fileName.includes("-ar") || url.includes("arbFiles");
-
-  toggle.checked = !isArabic;
-
-  toggle.addEventListener("change", function () {
-    let newPath = "";
-
-    if (fileName === "" || fileName === "index.html" || fileName === "index-ar.html") {
-      newPath = this.checked ? "index.html" : "index-ar.html";
-    } else {
-      if (this.checked && isArabic) {
-        const newFileName = fileName.replace("-ar", "");
-        newPath = path.replace("arbFiles/", "engFiles/").replace(fileName, newFileName);
-      } else if (!this.checked && !isArabic) {
-        const dotIndex = fileName.lastIndexOf(".");
-        const nameWithoutExt = fileName.substring(0, dotIndex);
-        const ext = fileName.substring(dotIndex);
-        const newFileName = nameWithoutExt + "-ar" + ext;
-        newPath = path.replace("engFiles/", "arbFiles/").replace(fileName, newFileName);
-      }
-    }
-
-    if (newPath !== "") {
-      window.location.href = newPath + hash;
-    }
-  });
-});
-
-
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
+ document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const form = e.target;
@@ -69,5 +32,3 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('formMessage').style.color = 'red';
   });
 });
-
-

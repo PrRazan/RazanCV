@@ -6,6 +6,7 @@
   
 }
 
+
 html, body {
   margin: 0;
   padding: 0;
@@ -158,103 +159,80 @@ body{
   }
 }
 
+/* From Uiverse.io by juanpabl0svn */ 
 .switch {
-  --_switch-bg-clr: #ffffff;
-  --_switch-padding: 2px;
-  --_slider-bg-clr: rgba(232, 186, 208, 0.65);
-  --_slider-bg-clr-on: rgb(232, 186, 208, 1);
-  --_slider-txt-clr: #ffffff;
-  --_label-padding: 0.3rem 0.8rem;
-  --_switch-easing: cubic-bezier(0.47, 1.64, 0.41, 0.8);
-
-  color: rgb(0, 0, 0);
-  width: fit-content;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: center;
+  font-size: 17px;
   position: relative;
-  border-radius: 9999px;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
   cursor: pointer;
-  isolation: isolate;
 }
 
-.switch input[type="checkbox"] {
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  --background: #20262c;
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
 }
 
-.switch > span {
-   font-size: 13px;
-  display: grid;
-  place-content: center;
-  transition: opacity 300ms ease-in-out 150ms;
-  padding: var(--_label-padding);
-}
-
-.switch::before,
-.switch::after {
+.slider:before {
+  position: absolute;
   content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
+  background: var(--background);
+  transition: 0.5s;
+}
+
+.decoration {
   position: absolute;
-  border-radius: inherit;
-  transition: inset 150ms ease-in-out;
+  content: "";
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  right: 20%;
+  top: 15%;
+  background: #e5f041e6;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+  box-shadow: -7px 10px 0 #e5f041e6, 8px 15px 0 #e5f041e6, -17px 1px 0 #e5f041e6,
+    -20px 10px 0 #e5f041e6, -7px 23px 0 #e5f041e6, -15px 25px 0 #e5f041e6;
 }
 
-.switch::before {
-  background-color: var(--_slider-bg-clr);
-  inset: var(--_switch-padding) 50% var(--_switch-padding) var(--_switch-padding);
-  transition:
-    inset 500ms var(--_switch-easing),
-    background-color 500ms ease-in-out;
-  z-index: -1;
-  box-shadow:
-    inset 0 1px 1px rgba(0, 0, 0, 0.3),
-    0 1px rgba(255, 255, 255, 0.3);
+input:checked ~ .decoration {
+  transform: translateX(-20px);
+  width: 10px;
+  height: 10px;
+  background: white;
+  box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
+    1px 17px 0 white, 10px 17px 0 white;
 }
 
-.switch::after {
-  background-color: var(--_switch-bg-clr);
-  inset: 0;
-  z-index: -2;
+input:checked + .slider {
+  background-color: #5494de;
 }
 
-.switch:focus-within::after {
-  inset: -0.25rem;
-}
-
-.switch:has(input:checked):hover > span:first-of-type,
-.switch:has(input:not(:checked)):hover > span:last-of-type {
-  opacity: 1;
-  transition-delay: 0ms;
-  transition-duration: 100ms;
-}
-
-.switch:has(input:checked):hover::before {
-  inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 45%;
-}
-
-.switch:has(input:not(:checked)):hover::before {
-  inset: var(--_switch-padding) 45% var(--_switch-padding) var(--_switch-padding);
-}
-
-.switch:has(input:checked)::before {
-  background-color: var(--_slider-bg-clr-on);
-  inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 50%;
-}
-
-.switch > span:last-of-type,
-.switch > input:checked + span:first-of-type {
-  opacity: 0.75;
-}
-
-.switch > input:checked ~ span:last-of-type {
-  opacity: 1;
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
 }
 
 .lbg{
@@ -284,6 +262,7 @@ body{
   height: 100%;
   pointer-events: auto;
   transform: scale(1.2);
+  background-color: black;
 }
 
 :root {

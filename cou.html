@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Razan's CV - Courses</title>
-  <link rel="stylesheet" href="../stylesheet.css" />
+  <link rel="stylesheet" href="stylesheet.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
@@ -16,15 +16,14 @@
   <nav class="navbar">
     <div class="lbg">
       <h1 class="logo">Razan's CV</h1>
-      <label for="langToggle" class="switch" aria-label="Toggle langToggle">
-  <input type="checkbox" id="langToggle" />
-  <span>العربية</span>
-  <span>English</span>
-  
+      <label for="switch" class="switch">
+  <input id="switch" type="checkbox" />
+  <span class="slider"></span>
+  <span class="decoration"></span>
 </label>
     </div>
     <ul class="menu">
-      <li><a href="../index.html">About me</a></li>
+      <li><a href="index.html">About me</a></li>
       <li><a href="exp.html">Experiences</a></li>
       <li><a href="cou.html">Courses</a></li>
       <li><a href="ach.html">Achievements</a></li>
@@ -45,7 +44,7 @@
       <div class="imcard-container">
         <div class="imcard">
           <div class="img-content1">
-            <img src="../Ai.png" />
+            <img src="Ai.png" />
           </div>
           <div class="imcontent">
             <p class="heading">Generative AI Engineering with LLMs</p>
@@ -56,7 +55,7 @@
 
       <div class="imcard-container">
         <div class="imcard">
-          <div class="img-content1"><img src="../ADMN.png" /></div>
+          <div class="img-content1"><img src="ADMN.png" /></div>
           <div class="imcontent">
             <p class="heading">Oracle Database 12c: Advanced SQL</p>
             <p>Training on advanced SQL techniques, focusing on complex queries, data manipulation, and optimization best practices.</p>
@@ -66,7 +65,7 @@
 
       <div class="imcard-container">
         <div class="imcard">
-          <div class="img-content1"><img src="../SQL.png" /></div>
+          <div class="img-content1"><img src="SQL.png" /></div>
           <div class="imcontent">
             <p class="heading">Oracle Database 12c: Administration</p>
             <p>Training on Oracle Database administration, covering installation, configuration and database maintenance tasks.</p>
@@ -76,7 +75,7 @@
 
       <div class="imcard-container">
         <div class="imcard">
-          <div class="img-content1"><img src="../nosql.png" /></div>
+          <div class="img-content1"><img src="nosql.png" /></div>
           <div class="imcontent">
             <p class="heading">Learning NoSQL Databases</p>
             <p>Training on the fundamentals of NoSQL databases, including types, structure, and real-world uses.</p>
@@ -86,7 +85,7 @@
 
       <div class="imcard-container">
         <div class="imcard">
-          <div class="img-content1"><img src="../secu.png" /></div>
+          <div class="img-content1"><img src="secu.png" /></div>
           <div class="imcontent">
             <p class="heading">Oracle Database 12c: Security</p>
             <p>Training focused on Oracle 12c database security, covering access control, encryption, and auditing.</p>
@@ -96,7 +95,7 @@
 
       <div class="imcard-container">
         <div class="imcard">
-          <div class="img-content1"><img src="../BR.png" /></div>
+          <div class="img-content1"><img src="BR.png" /></div>
           <div class="imcontent">
             <p class="heading">Oracle Database 12c: Backup and Recovery</p>
             <p>Training on Oracle 12c backup methods using RMAN, with recovery planning and system protection.</p>
@@ -168,6 +167,43 @@
 Some components were adapted and customized from Uiverse.io.</h6>
   </div>
 </footer>
-  <script src="../scripts.js" defer></script>
+
+<script>
+  window.onload = () => {
+    const toggle = document.getElementById('switch');
+    if (!toggle) return;
+
+
+    if (localStorage.getItem('theme') === 'light') {
+      addLightCSS();
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        addLightCSS();
+        localStorage.setItem('theme', 'light');
+      } else {
+        removeLightCSS();
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  };
+
+  function addLightCSS() {
+    if (!document.getElementById('light-mode-style')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'light-mode.css';
+      link.id = 'light-mode-style';
+      document.head.appendChild(link);
+    }
+  }
+
+  function removeLightCSS() {
+    const link = document.getElementById('light-mode-style');
+    if (link) link.remove();
+  }
+</script>
 </body>
 </html>

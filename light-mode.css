@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(243, 243, 243);
+}
+
+.navbar{
+    background: rgba(255, 255, 255, 0.731); 
+    color: #000;
+}
+
+.selfcard {
+ background: rgba(255, 255, 255, 0.61);
+   border-bottom: 3px solid rgba(255, 255, 255, 0.763);
+  border-left: 2px  rgba(255, 255, 255, 0.811) outset;
+}
+
+.selfcard h1{
+  color: rgb(255, 255, 255);  
+}
+
+.textbutton .front-text {
+  border-bottom: 2px solid #000000;
+}
+
+
+.card1 {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 30px -10px;
+  border: 1px solid rgb(0, 0, 0);
+  }
+.card {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 30px -10px;
+}
+
+.imcard {
+    border-style: solid;
+    border-color: #000;
+}
+
+.Skillcard{
+ box-shadow: -20px 20px 0px -5px #000000; 
+}
+
+.site-footer {
+  background-color: #cccccc;
+}
+
+.statement-section{
+background: rgba(255, 255, 255, 0.7);
+}
+
+.statement-section p {
+color: #000;
+}
+
+.statement-section blockquote {
+background-image: linear-gradient(35deg, #40367c,  #8e3964);
+}
+
+.form-field {
+    background-color: #dbdbdb;
+    box-shadow: inset 2px 5px 10px rgb(156, 156, 156);
+}
+
+.form{
+ background-color: #bcbcbc;
+ background-color: #193969;
+}
