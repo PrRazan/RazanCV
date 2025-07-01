@@ -7,10 +7,14 @@ body{
     color: #000;
 }
 
+.unib-button {
+box-shadow: 4px 4px 1px #000000;
+}
+
 .selfcard {
- background: rgba(255, 255, 255, 0.61);
-   border-bottom: 3px solid rgba(255, 255, 255, 0.763);
-  border-left: 2px  rgba(255, 255, 255, 0.811) outset;
+ background: rgba(0, 0, 0, 0.61);
+   border-bottom: 3px solid rgba(0, 0, 0, 0.763);
+  border-left: 2px  rgba(0, 0, 0, 0.811) outset;
 }
 
 .selfcard h1{
@@ -64,4 +68,8 @@ background-image: linear-gradient(35deg, #40367c,  #8e3964);
 .form{
  background-color: #bcbcbc;
  background-color: #193969;
+}
+
+.hero-container{
+    background: rgb(255, 255, 255);
 }
