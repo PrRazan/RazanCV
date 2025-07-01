@@ -1866,7 +1866,7 @@ background: #8a8a8a;}
   }
 
    .hero-3d {
-    transform: scale(1.2); 
+    transform: scale(1.5); 
   }
 
   .statement-section {
@@ -1998,15 +1998,18 @@ background: #8a8a8a;}
 }
 
 @media (min-width: 1600px){
+  .hero-3d{
+    transform: scale(1.9);
+  }
   .statement-section p,
   .statement-section blockquote{
-    font-size: 15px;
+    font-size: 20px;
   }
   .unib-button{
-    width: 350px;
+    width: 300px;
   }
   .uni-icon{
-    width: 290px;
+    width: 250px;
   }
 
 .button-text span:first-child {
@@ -2025,9 +2028,14 @@ background: #8a8a8a;}
 }
 
 .selfcard{
-  width: 250px;
-  height: 160px;
+  width: 300px;
+  height: 190px;
 }
+
+.selfcard h1{
+  font-size: 70px;
+}
+
 .form-card1{
   margin-left: 750px;
 }
