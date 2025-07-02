@@ -1,3 +1,5 @@
+ //script for contact's form
+ 
  document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
 

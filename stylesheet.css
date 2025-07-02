@@ -1,3 +1,4 @@
+/*general styles*/
 *{
     margin:0;
     padding:0;
@@ -1830,7 +1831,9 @@ background: #8a8a8a;}
 
 /*phone and big screen resizing*/
 
+/*phone size*/
 @media (max-width: 768px) {
+
   .textbutton{
     margin-top: 130px;
   }
@@ -1866,7 +1869,7 @@ background: #8a8a8a;}
   }
 
    .hero-3d {
-    transform: scale(1.5); 
+    transform: scale(1.8); 
   }
 
   .statement-section {
@@ -1997,6 +2000,8 @@ background: #8a8a8a;}
   }
 }
 
+
+/*big screen size*/
 @media (min-width: 1600px){
   .hero-3d{
     transform: scale(1.9);
