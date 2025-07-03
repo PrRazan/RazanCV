@@ -2004,7 +2004,7 @@ background: #8a8a8a;}
 /*big screen size*/
 @media (min-width: 1600px){
   .hero-3d{
-    transform: scale(1.9);
+    transform: scale(2);
   }
   .statement-section p,
   .statement-section blockquote{
@@ -2038,7 +2038,7 @@ background: #8a8a8a;}
 }
 
 .selfcard h1{
-  font-size: 70px;
+  font-size: 45px;
 }
 
 .form-card1{

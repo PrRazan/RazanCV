@@ -7,6 +7,18 @@ body{
     color: #000;
 }
 
+.Atch:before {
+  background: #505050;
+}
+
+.Atchbody {
+  color: #c4d7e7;
+}
+
+.Atchititle {
+  color: #c09baf;
+}
+
 .unib-button {
 box-shadow: 4px 4px 1px #000000;
 }
