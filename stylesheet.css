@@ -2010,6 +2010,7 @@ background: #8a8a8a;}
   .statement-section blockquote{
     font-size: 20px;
   }
+  
   .unib-button{
     width: 300px;
   }
@@ -2042,7 +2043,51 @@ background: #8a8a8a;}
 }
 
 .form-card1{
-  margin-left: 750px;
+  margin-left: 1000px;
+  margin-top: 120PX;
+  margin-bottom: 120PX;
 }
 
+
+.footer-container{
+  margin-top: 190PX;
+}
+
+.imcard{
+  width: 400PX;
+  height: 300PX;
+}
+
+.imcards{
+  max-width: 2000PX;
+  gap: 90PX;
+  margin-left: 300PX;
+}
+
+.card-wrapper{
+  margin-top: 30PX;
+}
+
+.Atch{
+  width: 400PX;
+}
+.orgAtch{
+  margin-top: 70PX;
+}
+.Skillcard{
+  width: 350PX;
+  height: 500PX;
+}
+.skmain{
+  width: 700PX;
+  gap: 140PX;
+}
+.skcard{
+  width: 200PX;
+  height: 200PX;
+}
+
+.cards-row{
+  margin-left: 600PX;
+}
 }
