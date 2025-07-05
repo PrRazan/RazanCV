@@ -1869,7 +1869,8 @@ background: #8a8a8a;}
   }
 
    .hero-3d {
-    transform: scale(1.8); 
+    transform: scale(1.3); 
+    margin-top: 200px;
   }
 
   .statement-section {
